@@ -141,7 +141,7 @@ $(document).ready(function () {
         var staticImage = images[i].parentNode;
         staticImage.removeChild(images[i]);
 
-        var $newPane = $('<div class="front-side"><div class="content" data-pic=' + i + '><div class="static-left-window pane' + i + '"></div><div class="static-right-window"></div></div></div>');
+        var $newPane = $('<div class="front-side"><div class="content" data-pic=' + i + '><div class="mask"><div class="static-left-window pane' + i + '"></div><div class="static-right-window"></div></div></div></div>');
 
         $(".spinner").append($newPane);
 

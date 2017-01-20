@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Patua+One');
 body {
     overflow: hidden;
-    background-color: black;
+    background-color: white;
 }
 
 nav {
-    background-color: black;
+    background-color: white;
     width: 100vw;
     height: 8vh;
     z-index: 10000000;
@@ -28,15 +28,22 @@ h1, h2 {
     border: 0.5rem ridge;
 }
 
+.mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
 .app {
     margin: 0 auto;
 }
 
 .myModal {
     text-align: center;
+    color: white;
     width: 90%;
     height: 90%;
-    background-color: rgba(255, 255, 255, 0.8);
+    /*background-color: rgba(255, 255, 255, 0.8);*/
     /*box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.2), 0px 0px 10px 10px rgba(255, 255, 255, 0.4), 0px 0px 15px 15px rgba(255, 255, 255, 0.6);*/
     padding: 0 25px;
 }
@@ -48,7 +55,7 @@ h1, h2 {
     width: 26rem;
     height: 26rem;
     border-radius: 50%;
-    border: 10px solid rgba(255, 255, 255, 0.8);
+    /*border: 10px solid rgba(255, 255, 255, 0.8);*/
 }
 
 #carousel {
@@ -59,7 +66,7 @@ h1, h2 {
 }
 
 .ticTacToe, .theaa, .airlines, .animals {
-    border: 5px outset rgba(122, 122, 122, 1);
+    /*border: 5px outset rgba(122, 122, 122, 1);*/
     background-size: cover;
     margin: 5%;
     width: 90%;
@@ -119,7 +126,7 @@ h1, h2 {
     width: 35rem;
     height: 35rem;
     border-radius: 5%;
-    border: 10px outset rgba(255, 255, 255, 0.8);
+    border: 10px solid rgba(255, 255, 255, 0.8);
     position: absolute;
     text-align: center;
     left: -17.5rem;
