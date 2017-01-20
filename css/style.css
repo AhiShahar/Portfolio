@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Patua+One');
+body {
+    overflow: hidden;
+    background-color: black;
+}
+
+nav {
+    background-color: black;
+    width: 100vw;
+    height: 8vh;
+    z-index: 10000000;
+}
+
+h1, h2 {
+    margin-top: -2%;
+    font-size: 3rem;
+    font-family: 'Patua One', cursive;
+}
+
+.carousel {
+    height: 60vh;
+    transform: scale(0.9);
+}
+
+.content {
+    background-repeat: no-repeat !important;
+    background-size: 100% 110% !important;
+    border: 0.5rem ridge;
+}
+
+.app {
+    margin: 0 auto;
+}
+
+.myModal {
+    text-align: center;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.2), 0px 0px 10px 10px rgba(255, 255, 255, 0.4), 0px 0px 15px 15px rgba(255, 255, 255, 0.6);
+    padding: 0 25px;
+}
+
+.profile {
+    position: relative;
+    left: calc(50% - 13rem);
+    top: calc(50% - 13rem);
+    width: 26rem;
+    height: 26rem;
+    border-radius: 50%;
+    border: 10px solid rgba(255, 255, 255, 0.8);
+}
+
+#carousel {
+    position: absolute;
+    top: 60px;
+    padding: 0;
+    margin: 0;
+}
+
+.ticTacToe, .theaa, .airlines, .animals {
+    border: 5px outset rgba(122, 122, 122, 1);
+    background-size: cover;
+    margin: 5%;
+    width: 90%;
+}
+
+.ticTacToe {
+    height: 90%;
+    background-image: url("../assets/XO.png");
+}
+
+.theaa, .airlines, .animals {
+    height: 45%;
+    margin: 2.5% 5%;
+}
+
+.theaa1 {
+    background-image: url("../assets/theaahead.png");
+}
+
+.theaa2 {
+    background-image: url("../assets/theaa.png");
+}
+
+.airlines1 {
+    background-image: url("../assets/airlinessearch.png");
+}
+
+.airlines2 {
+    background-image: url("../assets/airlinesseats.png");
+}
+
+.animals1 {
+    background-image: url("../assets/animals1.png");
+}
+
+.animals2 {
+    background-image: url("../assets/animals2.png");
+}
+
+.intro {
+    text-shadow: 5px 5px 20px rgba(255, 255, 255, 1);
+    position: absolute;
+    text-align: center;
+    left: -50%;
+}
+
+.introHead {
+    font-size: 6rem;
+}
+
+.subIntro {
+    font-size: 3rem;
+}
+
+.contact {
+    padding-top: 5%;
+    width: 35rem;
+    height: 35rem;
+    border-radius: 5%;
+    border: 10px outset rgba(255, 255, 255, 0.8);
+    position: absolute;
+    text-align: center;
+    left: -17.5rem;
+}
+
+#drop-nav {
+    margin: 0;
+    width: 100vw;
+}
+
+#drop-nav .navBar {
+    display: block;
+    margin: 0 1%;
+    float: left;
+    text-align: center;
+    padding-top: 1.5%;
+    color: #F7F7FF;
+    font-weight: 300;
+    height: 4rem;
+    z-index: 10;
+    width: 18%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.5s, box-shadow 0.5s, color 0.5s, top 0.5s;
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+}
+
+#drop-nav .navBar:hover {
+    color: #000;
+    font-weight: bold;
+    z-index: 1000000000;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 1);
+
+}
+
+#drop-nav .navBar ul {
+    display: block;
+    position: absolute;
+    top: -20rem;
+    z-index: 1000000000;
+    transition: top 1s;
+    padding-left: 0;
+}
+
+#drop-nav .navBar:hover ul {
+    top: 2rem;
+    height: 20rem;
+    margin-top: -2rem;
+    margin-left: -0.3%;
+    width: 19%;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 1);
+
+}
+
+#drop-nav .navBar:hover ul li {
+    margin-top: 2rem;
+}
+
+.contactIcons {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+}

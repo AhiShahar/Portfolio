@@ -1,0 +1,138 @@
+html, body {
+  margin: 0;
+  max-height: 100vh;
+}
+.js-transitions-disabled * {
+  transition: none !important;
+}
+.carousel {
+  position: relative;
+  height: 100%;
+  /*overflow: hidden;*/
+  perspective: 50vw;
+  perspective-origin: 50% 50%;
+}
+
+.static-display {
+  position: relative;
+  display: inline-block;
+  top: 20px;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  margin: auto;
+  transform-style: preserve-3d;
+  transform: translateZ(calc(-50vh + 20px));
+}
+.spinner {
+  position: relative;
+  display: inline-block;
+  width: calc(50vw - (20px));
+  height: calc(100vh - 40px);
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: 0;
+  margin: auto;
+  transform-style: preserve-3d;
+  transition: transform 1.5s;
+  backface-visibility: hidden;
+  transform-origin: 50% 50%;
+  transform: rotateX(0);
+}
+.js-spin-top .spinner {
+  transform: rotateX(-90deg);
+}
+.js-spin-bottom .spinner {
+  transform: rotateX(90deg);
+}
+.js-spin-top .turn-right {
+  transform: rotateX(90deg);
+}
+.js-spin-bottom .turn-right {
+  transform: rotateX(-90deg);
+}
+.turn-right {
+  right: 0;
+  left: auto;
+}
+.front-side {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.front-side.js-next {
+  display: block;
+  transform: rotateX(90deg) translateZ(calc(50vh - 20px));
+}
+.turn-right .front-side.js-next {
+  transform: rotateX(270deg) translateZ(calc(50vh - 20px));
+}
+.js-spin-bottom .front-side.js-next {
+  transform: rotateX(-90deg) translateZ(calc(50vh - 20px));
+}
+.js-spin-bottom .turn-right .front-side.js-next {
+  transform: rotateX(-270deg) translateZ(calc(50vh - 20px));
+}
+.js-active {
+  display: block;
+  background-color: white;
+  transform: translateZ(calc(50vh - 20px));
+}
+.content {
+  position: relative;
+  display: inline-block;  width: 200%;
+  height: 100%;
+  left: 0;
+}
+.turn-right .content {
+  left: -100%;
+}
+.static-left-window, .static-right-window {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-size: auto;
+}
+.static-right-window {
+  right: 0;
+  left: auto;
+}
+/*.static-left-window:after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.1);
+}*/
+.static-right-window {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.static-right-window .static-main {
+  position: absolute;
+  text-align: left;
+  color: #FFF;
+  padding: 0 8vw;
+  line-height: 1.65;
+  margin: 0;
+  opacity: 0.8;
+}
+.static-right-window .static-main p:last-child {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+.static-right-window .static-index {
+  position: absolute;
+  right: -1vh;
+  top: 35vh;
+  opacity: 0.04;
+  color: #000;
+}
