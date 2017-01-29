@@ -4,17 +4,6 @@ var activeIndex = 0,
     $stage = void 0,
     canvas = false;
 
-// var appendControls = function () {
-//     for (var i = 0; i < limit; i++) {
-//         $('.controls').append('<a href="#" data-index="' + i + '"></a>');
-//     }
-//     var height = $('.controls').children().last().outerHeight();
-//
-//     $('.controls').css('height', 30 + limit * height);
-//     $controls = $('.controls').children();
-//     $controls.eq(activeIndex).addClass('active');
-// };
-
 var setIndexes = function () {
     $('.spinner').children().each(function (i, el) {
         $(el).attr('data-index', i);
@@ -98,7 +87,6 @@ var attachListeners = function () {
         }
     };
 
-
     // $controls.on('click', function (e) {
     //     $('.content').css("background", "url(assets/diving" + (toIndex+1) + ".jpg)");
     //     spin(toIndex - activeIndex);
@@ -151,11 +139,18 @@ $(document).ready(function () {
 
         $leftWindow = $('.content .static-left-window').last();
         $rightWindow = $('.content .static-right-window').last();
-        $('.content').css("background", "url(assets/diving1.jpg)");
 
         $newContext.appendTo($rightWindow);
+        $leftWindow.css("background", "rgba(" + (255-((i+1)*20)) + "," + (255-((i+1)*20)) + "," + (255-((i+1)*20)) + ",1)");
+        // $rightWindow.css("background", "url(assets/diving" + (i+1)%4 + ".jpg)");
+        $rightWindow.css("background", "rgba(" + (20+((i+1)*20)) + "," + (20+((i+1)*20)) + "," + (20+((i+1)*20)) + ",1)");
         $newImage.appendTo($leftWindow);
 
     }
+
+    $("li").on("click", function(e) {
+      spin(e.target.dataset.index - activeIndex);
+    });
+
     init();
 });
