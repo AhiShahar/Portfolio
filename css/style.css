@@ -48,8 +48,6 @@ li {
     color: black;
     width: 90%;
     height: 90%;
-    /*background-color: rgba(255, 255, 255, 0.8);*/
-    /*box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.2), 0px 0px 10px 10px rgba(255, 255, 255, 0.4), 0px 0px 15px 15px rgba(255, 255, 255, 0.6);*/
     padding: 0 25px;
 }
 
@@ -60,7 +58,6 @@ li {
     width: 26rem;
     height: 26rem;
     border-radius: 50%;
-    /*border: 10px solid rgba(255, 255, 255, 0.8);*/
 }
 
 #carousel {
@@ -70,11 +67,16 @@ li {
     margin: 0;
 }
 
-.ticTacToe, .theaa, .airlines, .animals {
-    border: 1px outset rgba(122, 122, 122, 1);
+.ticTacToe, .theaa, .airlines, .animals, .world-aid {
+    border: 2px outset rgba(122, 122, 122, 1);
     background-size: cover;
     margin: 5%;
     width: 90%;
+}
+
+.world-aid {
+    height: 90%;
+    background-image: url("../assets/worldaid.png");
 }
 
 .ticTacToe {
@@ -204,4 +206,21 @@ li {
     width: 4rem;
     height: 4rem;
     margin: 4rem;
+}
+
+.junglejs {
+    position: relative;
+    width: 30rem;
+    top: 35%;
+    left: calc(50% - 15rem);
+}
+
+.white-font {
+    color: white;
+}
+
+.skillIcon {
+    width: 20%;
+    margin-left: 10%;
+    margin-top: 4%;
 }
