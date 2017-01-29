@@ -18,6 +18,10 @@ h1, h2 {
     font-family: 'Patua One', cursive;
 }
 
+li {
+    cursor: pointer;
+}
+
 .carousel {
     height: 60vh;
     transform: scale(0.9);
