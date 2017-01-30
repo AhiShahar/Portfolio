@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Patua+One');
+@import url('http://fonts.googleapis.com/css?family=Ubuntu:bold');
+@import url('http://fonts.googleapis.com/css?family=Vollkorn');
+
+
+
 body {
     overflow: hidden;
     /*background: url("../assets/diving4.jpg");*/
@@ -15,11 +19,20 @@ nav {
 h1, h2 {
     margin-top: -2%;
     font-size: 3rem;
-    font-family: 'Patua One', cursive;
+    font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+}
+
+h3 {
+    font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
 }
 
 li {
     cursor: pointer;
+    font-family: 'Vollkorn', Georgia, Times, serif;
+}
+
+p {
+    font-family: 'Vollkorn', Georgia, Times, serif;
 }
 
 .carousel {
@@ -139,15 +152,16 @@ li {
     left: -17.5rem;
     background-color: white;
 }
-
+/*
 #drop-nav {
     margin: 0;
     width: 100vw;
 }
 
-#drop-nav .navBar {
+li.navBar {
     display: block;
     margin: 0 1%;
+    margin-top: -1.2rem;
     float: left;
     text-align: center;
     padding-top: 1.5%;
@@ -156,38 +170,90 @@ li {
     height: 4rem;
     z-index: 10;
     width: 18%;
-    transition: font-weight 0.2s;
+    transition: color 0.3s, margin-top 0.3s;
     box-sizing: border-box;
 }
 
 #drop-nav .navBar:hover {
-    color: #000;
-    font-weight: 800;
     z-index: 1000000000;
+    margin-top: 0rem;
+}
+#drop-nav li:hover {
+    color: #62F;
 }
 
 #drop-nav .navBar ul {
-    display: block;
+    color: #000;
     position: absolute;
-    top: -20rem;
-    z-index: 10;
+    top: -5rem;
     transition: top 1s;
-    padding-left: 0;
-    width: 18%;
     background-color: white;
 }
 
 #drop-nav .navBar:hover ul {
-    top: 5rem;
-    height: 20rem;
+    top: 2rem;
     margin-top: -2rem;
-    z-index: 11;
-    /*margin-left: -%;*/
+    left: 0;
 }
 
 #drop-nav .navBar ul li {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    margin-left: 4rem;
+    display: inline-block;
     z-index: 9;
+    width: 10vw;
+    transition: color 0.3s;
+}
+
+#drop-nav .navBar ul li:hover {
+    color: #62F;
+}*/
+
+li.navBar {
+    display: block;
+    margin: 0 1%;
+    margin-top: -1rem;
+    float: left;
+    text-align: center;
+    color: #000;
+    font-size: 1rem;
+    height: 2rem;
+    width: 18%;
+    transition: color 0.3s, margin-top 0.3s;
+    box-sizing: border-box;
+}
+
+li.navBar:hover {
+    color: #62F;
+    margin-top: 0;
+}
+
+#drop-nav {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    top: -2rem;
+    background-color: white;
+}
+
+#drop-nav li {
+    display: inline-block;
+    width: calc(100vw/7);
+}
+
+.navBar ul {
+    color: #000;
+    position: absolute;
+    transition: top 1s;
+    background-color: white;
+}
+
+.navBar ul li {
+    top: -3rem;
+}
+
+.navBar ul li:hover {
+
 }
 
 .contactIcons {

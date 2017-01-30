@@ -152,5 +152,11 @@ $(document).ready(function () {
       spin(e.target.dataset.index - activeIndex);
     });
 
+    $(".projects").hover(function() {
+        $(".projects ul").css("top", "0rem");
+    }, function() {
+        $(".projects ul").css("top", "-3rem");
+    });
+
     init();
 });

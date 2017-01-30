@@ -17,12 +17,12 @@
 <body>
 
     <!-- <div id="drop-nav"> -->
-      <ul id="drop-nav">
+    <ul>
         <li class="navBar" data-index="0">Home</li>
         <li class="navBar" data-index="1">About</li>
         <li class="navBar" data-index="2">Skills</li>
-        <li class="navBar">Projects
-            <ul>
+        <li class="navBar projects">Projects
+            <ul id="drop-nav">
                 <li data-index="3">Tic Tac Toe</li>
                 <li data-index="4">Theaa</li>
                 <li data-index="5">Burning Airlines</li>
@@ -32,7 +32,7 @@
             </ul>
         </li>
         <li class="navBar" data-index="9">Contact</li>
-        </ul>
+    </ul>
     <!-- </div> -->
 
     <div class="app" id="carousel" data-panes="10">
@@ -51,15 +51,14 @@
         <div class="myModal white-font">
             <h2>About Me:</h2>
             <p>Hello! I'm Ahi, a Sydney based web developer, who just finished a 12 weeks immersive course at General Assembly.
-    <br><br>
-I first discovered a passion for software development in computer science during high school. Since then with 3 years in the IDF and 7 years as a baker since arriving in Australia, I have finally decided it is time to follow my passion. That passion has been recently reignited through a life changing decision to completely immerse myself into full time web development study at General Assembly, and all that worked pretty well with my secret life as a cave diver who loves to push his limits and explore new realms!
-<br><br>
-In the past weeks of study, I have learnt various languages, libraries and frameworks such as JavaScript, Ruby, jQuery, Rails, Backbone, React, D3js, Ajax, and have touched on several others.
-I have also developed my skills in teamwork, learning how to read and debug other developer's work.
-<br><br>
-I have also honed to my natural curiosity to understand how things work and how/if they can be improved. This focus has allowed me to quickly develop a greater understanding of web development in such a short time and has encouraged me to study simultaneously online, using sites such as Wes Bos's online courses.
-<br><br>
-I am continuously pushing myself to strive for the best and further myself as a person and web developer, the current challange is writing this site, and the task is to do it using only my own code. Hope you'll enjoy it!</p>
+                <br><br> I first discovered a passion for software development in computer science during high school. Since then with 3 years in the IDF and 7 years as a baker since arriving in Australia, I have finally decided it is time to follow my
+                passion. That passion has been recently reignited through a life changing decision to completely immerse myself into full time web development study at General Assembly, and all that worked pretty well with my secret life as a cave diver
+                who loves to push his limits and explore new realms!
+                <br><br> In the past weeks of study, I have learnt various languages, libraries and frameworks such as JavaScript, Ruby, jQuery, Rails, Backbone, React, D3js, Ajax, and have touched on several others. I have also developed my skills in
+                teamwork, learning how to read and debug other developer's work.
+                <br><br> I have also honed to my natural curiosity to understand how things work and how/if they can be improved. This focus has allowed me to quickly develop a greater understanding of web development in such a short time and has encouraged
+                me to study simultaneously online, using sites such as Wes Bos's online courses.
+                <br><br> I am continuously pushing myself to strive for the best and further myself as a person and web developer, the current challange is writing this site, and the task is to do it using only my own code. Hope you'll enjoy it!</p>
         </div>
     </div>
     <div class="static-image"><img class="profile" src="assets/adjustedprofile.png"></div>
@@ -99,8 +98,12 @@ I am continuously pushing myself to strive for the best and further myself as a 
     <div class="static-context">
         <div class="myModal">
             <h2>Tic Tac Toe</h2>
-            <p>A very simple Tic Tac Toe game made only within 2 weeks of my re-encoutner with coding. <br><br> The game features an undefeatable AI and a few player options including character selection, playing against other players or playing against the game.</p>
-            <div class="links"><a href="https://ahishahar.github.io/TicTacHello/" target="_blank"><img src="assets/www.png" alt="Direct Link to app"></a><a href="https://github.com/AhiShahar/TicTacHello" target="_blank"><img src="assets/icons/github.png" alt=""></a></div>
+            <p>A very simple Tic Tac Toe game made only within 2 weeks of my re-encoutner with coding. <br><br> The game features an undefeatable AI and a few player options including character selection, playing against other players or playing against
+                the game.</p>
+            <div class="links">
+                <a href="https://ahishahar.github.io/TicTacHello/" target="_blank"><img src="assets/www.png" alt="Direct Link to app"></a>
+                <a href="https://github.com/AhiShahar/TicTacHello" target="_blank"><img src="assets/icons/github.png" alt=""></a>
+            </div>
         </div>
     </div>
     <div class="static-image">
@@ -110,8 +113,12 @@ I am continuously pushing myself to strive for the best and further myself as a 
     <div class="static-context">
         <div class="myModal">
             <h2>Theaa</h2>
-            <p>Theaa is a Ruby on Rails app designed to help small businesses and professionals in setting appointments, availability, schedules and advertisements. <br><br>Once a customer is approved by a professional he then sees his schedule and details and can select from his appointments or associates appointments.</p>
-            <div class="links"><a href="https://theaa.herokuapp.com" target="_blank"><img src="assets/www.png" alt="Direct Link to app"></a><a href="https://github.com/AhiShahar/the_appointment_app" target="_blank"><img src="assets/icons/github.png" alt=""></a></div>
+            <p>Theaa is a Ruby on Rails app designed to help small businesses and professionals in setting appointments, availability, schedules and advertisements. <br><br>Once a customer is approved by a professional he then sees his schedule and details
+                and can select from his appointments or associates appointments.</p>
+            <div class="links">
+                <a href="https://theaa.herokuapp.com" target="_blank"><img src="assets/www.png" alt="Direct Link to app"></a>
+                <a href="https://github.com/AhiShahar/the_appointment_app" target="_blank"><img src="assets/icons/github.png" alt=""></a>
+            </div>
         </div>
     </div>
     <div class="static-image">
@@ -123,7 +130,10 @@ I am continuously pushing myself to strive for the best and further myself as a 
         <div class="myModal">
             <h2>Burning Airlines</h2>
             <p>A time limited group exercise, aimed to test our skills on rails while learning a completely new skill (Backbone) and working in a group for the first time. Out task is to build a booking system for an airline within 2 days.</p>
-            <div class="links"><a href="https://burningfriendships.herokuapp.com" target="_blank"><img src="assets/www.png" alt="Direct Link to app"></a><a href="https://github.com/AhiShahar/Burning-Airlines" target="_blank"><img src="assets/icons/github.png" alt=""></a></div>
+            <div class="links">
+                <a href="https://burningfriendships.herokuapp.com" target="_blank"><img src="assets/www.png" alt="Direct Link to app"></a>
+                <a href="https://github.com/AhiShahar/Burning-Airlines" target="_blank"><img src="assets/icons/github.png" alt=""></a>
+            </div>
         </div>
     </div>
     <div class="static-image">
@@ -135,7 +145,10 @@ I am continuously pushing myself to strive for the best and further myself as a 
         <div class="myModal">
             <h2>Virtual Reality</h2>
             <p>A group project using VR to simulate an animals habitat in order to immerse the user inside the animals world. We used A-Frame to create the project which was great fun overcoming the challenges using such an expermental technology</p>
-            <div class="links"><a href="https://animal-aid.herokuapp.com/animals/" target="_blank"><img src="assets/www.png" alt="Direct Link to app"></a><a href="https://github.com/rocking42/animal-aid/" target="_blank"><img src="assets/icons/github.png" alt=""></a></div>
+            <div class="links">
+                <a href="https://animal-aid.herokuapp.com/animals/" target="_blank"><img src="assets/www.png" alt="Direct Link to app"></a>
+                <a href="https://github.com/rocking42/animal-aid/" target="_blank"><img src="assets/icons/github.png" alt=""></a>
+            </div>
         </div>
     </div>
     <div class="static-image">
@@ -146,8 +159,12 @@ I am continuously pushing myself to strive for the best and further myself as a 
     <div class="static-context">
         <div class="myModal">
             <h2>World-Aid</h2>
-            <p>World Aid a data visualisation platform using 3D and 2D data displays. <br><br>It is used to display the contributions as well as aid received globally as well as highlighting an aid breakdown.  <br><br>This was my final project at GA created in collaboration with my classmate.</p>
-            <div class="links"><a href="http://www.world-aid.info" target="_blank"><img src="assets/www.png" alt="Direct Link to app"></a><a href="https://github.com/rocking42/WorldAid/" target="_blank"><img src="assets/icons/github.png" alt=""></a></div>
+            <p>World Aid a data visualisation platform using 3D and 2D data displays. <br><br>It is used to display the contributions as well as aid received globally as well as highlighting an aid breakdown. <br><br>This was my final project at GA created
+                in collaboration with my classmate.</p>
+            <div class="links">
+                <a href="http://www.world-aid.info" target="_blank"><img src="assets/www.png" alt="Direct Link to app"></a>
+                <a href="https://github.com/rocking42/WorldAid/" target="_blank"><img src="assets/icons/github.png" alt=""></a>
+            </div>
         </div>
     </div>
     <div class="static-image">
@@ -157,8 +174,12 @@ I am continuously pushing myself to strive for the best and further myself as a 
     <div class="static-context">
         <div class="myModal">
             <h2>JungleJS</h2>
-            <p>Jungle JS is a CSS grid layout and jQuery plugin library.<br><br><a href="https://rocking42.github.io/portfolio/#" target="_blank">Ned</a> and I created the css grid layout at its simplest form as well as incorporated our default styles to certain elements. <br><br>The jQuery element is a collection of our favourite JS creations packaged up for anyone to use.</p><br><br>
-            <div class="links"><a href="http://www.world-aid.info" target="_blank"><img src="assets/www.png" alt="Direct Link to app"></a><a href="https://github.com/rocking42/WorldAid/" target="_blank"><img src="assets/icons/github.png" alt=""></a></div>
+            <p>Jungle JS is a CSS grid layout and jQuery plugin library.<br><br><a href="https://rocking42.github.io/portfolio/#" target="_blank">Ned</a> and I created the css grid layout at its simplest form as well as incorporated our default styles to
+                certain elements. <br><br>The jQuery element is a collection of our favourite JS creations packaged up for anyone to use.</p><br><br>
+            <div class="links">
+                <a href="http://www.world-aid.info" target="_blank"><img src="assets/www.png" alt="Direct Link to app"></a>
+                <a href="https://github.com/rocking42/WorldAid/" target="_blank"><img src="assets/icons/github.png" alt=""></a>
+            </div>
         </div>
     </div>
     <div class="static-image"><img class="junglejs" src="assets/jungle.png">
@@ -166,12 +187,18 @@ I am continuously pushing myself to strive for the best and further myself as a 
 
     <div class="static-context">
         <div class="contact">
-            <h2 >Contact Me:</h2>
+            <h2>Contact Me:</h2>
             <div class="contactDetails">
-                <li class="email"><a href="mailto:ahishahar1987@gmail.com"><img class="contactIcons" src="assets/icons/email.png" alt="">&nbsp&nbsp&nbsp ahi.shahar1@gmail.com</a></li><br>
+                <li class="email">
+                    <a href="mailto:ahishahar1987@gmail.com"><img class="contactIcons" src="assets/icons/email.png" alt="">&nbsp&nbsp&nbsp ahi.shahar1@gmail.com</a>
+                </li><br>
                 <li class="mobile"><img class="contactIcons" src="assets/icons/mobile.png" alt="">&nbsp&nbsp&nbsp+61431-585-785</li><br>
-                <li class="github"><a href="https://github.com/AhiShahar/" target="_blank"><img class="contactIcons" src="assets/icons/github.png" alt="">&nbsp&nbsp&nbspAhiShahar</a></li><br>
-                <li class="linkedin"><a href="https://au.linkedin.com/in/ahi-shahar-58a472b0"><img class="contactIcons" target="_blank" src="assets/icons/linkedin.png" alt="">&nbsp&nbsp&nbspAhi Shahar</a></li>
+                <li class="github">
+                    <a href="https://github.com/AhiShahar/" target="_blank"><img class="contactIcons" src="assets/icons/github.png" alt="">&nbsp&nbsp&nbspAhiShahar</a>
+                </li><br>
+                <li class="linkedin">
+                    <a href="https://au.linkedin.com/in/ahi-shahar-58a472b0"><img class="contactIcons" target="_blank" src="assets/icons/linkedin.png" alt="">&nbsp&nbsp&nbspAhi Shahar</a>
+                </li>
             </div>
         </div>
     </div>
