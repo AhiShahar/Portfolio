@@ -2,7 +2,7 @@
 @import url('http://fonts.googleapis.com/css?family=Vollkorn');
 
 
-
+font-size
 body {
     overflow: hidden;
     /*background: url("../assets/diving4.jpg");*/
@@ -160,8 +160,8 @@ li.navBar {
     float: left;
     text-align: center;
     color: #000;
-    font-size: 1rem;
-    height: 2rem;
+    font-size: 2vw;
+    height: 2vw;
     width: 18%;
     transition: color 0.3s, margin-top 0.3s;
     box-sizing: border-box;
