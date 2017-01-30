@@ -189,7 +189,7 @@ li.navBar:hover {
 
 .navBar ul {
     position: absolute;
-    transition: top 1s;
+    transition: top 1s, height 1s, padding-top 1s;
     background-color: white;
 }
 
