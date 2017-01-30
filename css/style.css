@@ -1,8 +1,6 @@
 @import url('http://fonts.googleapis.com/css?family=Ubuntu:bold');
 @import url('http://fonts.googleapis.com/css?family=Vollkorn');
 
-
-font-size
 body {
     overflow: hidden;
     /*background: url("../assets/diving4.jpg");*/
@@ -32,6 +30,7 @@ li {
 }
 
 p {
+    font-size: 1.3rem;
     font-family: 'Vollkorn', Georgia, Times, serif;
 }
 
@@ -161,7 +160,7 @@ li.navBar {
     text-align: center;
     color: #000;
     font-size: 2vw;
-    height: 2vw;
+    height: 2rem;
     width: 18%;
     transition: color 0.3s, margin-top 0.3s;
     box-sizing: border-box;
@@ -209,6 +208,10 @@ li.navBar:hover {
     top: 1rem;
 }
 
+.contactDetails {
+    font-size: 1.5rem;
+}
+
 .links {
     position: relative;
     left: calc(25% - 8rem);
@@ -229,6 +232,10 @@ li.navBar:hover {
 
 .white-font {
     color: white;
+}
+
+.font-size-1 {
+    font-size: 1.2rem;
 }
 
 .skillIcon {

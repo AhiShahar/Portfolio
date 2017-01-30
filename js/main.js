@@ -155,7 +155,7 @@ $(document).ready(function () {
     $(".projects").hover(function() {
         $(".projects ul").css({"top": "0rem", "height": "3rem", "paddingTop": "1rem"});
     }, function() {
-        $(".projects ul").css({"top": "-3rem", "height": "1rem", "paddingTop": "0rem"});
+        $(".projects ul").css({"top": "-3rem", "height": "0rem", "paddingTop": "0rem"});
     });
 
     init();
