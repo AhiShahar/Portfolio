@@ -152,62 +152,6 @@ p {
     left: -17.5rem;
     background-color: white;
 }
-/*
-#drop-nav {
-    margin: 0;
-    width: 100vw;
-}
-
-li.navBar {
-    display: block;
-    margin: 0 1%;
-    margin-top: -1.2rem;
-    float: left;
-    text-align: center;
-    padding-top: 1.5%;
-    color: #000;
-    font-weight: 300;
-    height: 4rem;
-    z-index: 10;
-    width: 18%;
-    transition: color 0.3s, margin-top 0.3s;
-    box-sizing: border-box;
-}
-
-#drop-nav .navBar:hover {
-    z-index: 1000000000;
-    margin-top: 0rem;
-}
-#drop-nav li:hover {
-    color: #62F;
-}
-
-#drop-nav .navBar ul {
-    color: #000;
-    position: absolute;
-    top: -5rem;
-    transition: top 1s;
-    background-color: white;
-}
-
-#drop-nav .navBar:hover ul {
-    top: 2rem;
-    margin-top: -2rem;
-    left: 0;
-}
-
-#drop-nav .navBar ul li {
-    margin-top: 1rem;
-    margin-left: 4rem;
-    display: inline-block;
-    z-index: 9;
-    width: 10vw;
-    transition: color 0.3s;
-}
-
-#drop-nav .navBar ul li:hover {
-    color: #62F;
-}*/
 
 li.navBar {
     display: block;
