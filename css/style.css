@@ -228,6 +228,8 @@ li.navBar:hover {
     margin-top: 0;
 }
 
+
+
 #drop-nav {
     position: absolute;
     left: 0;
@@ -242,18 +244,18 @@ li.navBar:hover {
 }
 
 .navBar ul {
-    color: #000;
     position: absolute;
     transition: top 1s;
     background-color: white;
 }
 
 .navBar ul li {
-    top: -3rem;
+    color: #000;
+    transition: color 0.3s;
 }
 
 .navBar ul li:hover {
-
+    color: #62F;
 }
 
 .contactIcons {
