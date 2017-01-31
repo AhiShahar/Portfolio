@@ -133,18 +133,21 @@ $(document).ready(function () {
 
         $(".spinner").append($newPane);
 
-        if ( i === 0 ) {
-            $(".front-side").addClass("js-active");
-        }
-
         $leftWindow = $('.content .static-left-window').last();
         $rightWindow = $('.content .static-right-window').last();
 
         $newContext.appendTo($rightWindow);
-        $leftWindow.css("background", "rgba(" + (255-((i+1)*20)) + "," + (255-((i+1)*20)) + "," + (255-((i+1)*20)) + ",1)");
+        $leftWindow.css("background", "rgba(" + (124-((i+1)*10)) + "," + (239-((i+1)*10)) + "," + (255-((i+1)*10)) + ",1)");
         // $rightWindow.css("background", "url(assets/diving" + (i+1)%4 + ".jpg)");
-        $rightWindow.css("background", "rgba(" + (20+((i+1)*20)) + "," + (20+((i+1)*20)) + "," + (20+((i+1)*20)) + ",1)");
+        $rightWindow.css("background", "rgba(" + (255+((i+1)*10)) + "," + (149+((i+1)*10)) + "," + (202+((i+1)*10)) + ",1)");
         $newImage.appendTo($leftWindow);
+
+        if ( i === 0 ) {
+            $(".front-side").addClass("js-active");
+            $leftWindow.css("background", "none");
+            $rightWindow.css("background", "none");
+            $('.content').css("background", "url(assets/diving.jpg)");
+        }
 
     }
 
@@ -152,11 +155,36 @@ $(document).ready(function () {
       spin(e.target.dataset.index - activeIndex);
     });
 
-    $(".projects").hover(function() {
-        $(".projects ul").css({"top": "0rem", "height": "3rem", "paddingTop": "1rem"});
-    }, function() {
-        $(".projects ul").css({"top": "-3rem", "height": "0rem", "paddingTop": "0rem"});
+    // $(".projects").hover(function() {
+    //     $(".projects ul").css({"top": "0rem", "height": "3rem"});
+    // }, function() {
+    //     $(".projects ul").css({"top": "-3rem", "height": "0rem"});
+    // });
+    var whatever = false;
+
+    $(".projects").on('mouseenter', function() {
+        $("#drop-nav").fadeIn();
     });
+
+    $(".projects li").on('mouseleave', function() {
+        setTimeout(function() {
+            $("#drop-nav").fadeOut()
+        }, 4000);
+    });
+
+
+
+
+
+    // $("#drop-nav").on('mouseleave', function() {
+    //     $(this).toggle();
+    // });
+    //
+    // $("#drop-nav").on('mouseenter', function() {
+    //     whatever = true;
+    // });
+
+
 
     init();
 });

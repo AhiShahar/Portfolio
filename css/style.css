@@ -1,5 +1,6 @@
 @import url('http://fonts.googleapis.com/css?family=Ubuntu:bold');
 @import url('http://fonts.googleapis.com/css?family=Vollkorn');
+@import url('https://fonts.googleapis.com/css?family=Arsenal|Special+Elite');
 
 body {
     overflow: hidden;
@@ -16,22 +17,22 @@ nav {
 
 h1, h2 {
     margin-top: -2%;
-    font-size: 3rem;
-    font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
-}
-
-h3 {
-    font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+    /*font-size: 3rem;*/
+    /*font-family: 'Ubuntu', Helvetica, Arial, sans-serif;*/
+    font-family: 'Special Elite', cursive;
 }
 
 li {
     cursor: pointer;
-    font-family: 'Vollkorn', Georgia, Times, serif;
+    padding-top: 1rem;
+    font-family: 'Arsenal', san-serif;
+    /*font-size: 20px;*/
 }
 
 p {
-    font-size: 1.3rem;
-    font-family: 'Vollkorn', Georgia, Times, serif;
+    font-size: 18px;
+    font-family: 'Arsenal', sans-serif;
+    line-height: 1.5;
 }
 
 .carousel {
@@ -126,10 +127,11 @@ p {
 }
 
 .intro {
-    text-shadow: 5px 5px 20px rgba(255, 255, 255, 1);
+    /*text-shadow: 5px 5px 20px rgba(255, 255, 255, 1);*/
     position: absolute;
     text-align: center;
     left: -50%;
+    color: white;
 }
 
 .introHead {
@@ -141,9 +143,9 @@ p {
 }
 
 .contact {
-    padding-top: 5%;
-    width: 35rem;
-    height: 35rem;
+    padding: 5%;
+    min-width: 35rem;
+    /*height: 35vh;*/
     border-radius: 5%;
     border: 10px solid rgba(255, 255, 255, 0.8);
     position: absolute;
@@ -159,7 +161,6 @@ li.navBar {
     float: left;
     text-align: center;
     color: #000;
-    font-size: 1rem;
     height: 2rem;
     width: 18%;
     transition: color 0.3s, margin-top 0.3s, font-size 0.3s;
@@ -168,8 +169,9 @@ li.navBar {
 
 li.navBar:hover {
     /*color: #62F;*/
-    font-size: 1.5rem;
-    margin-top: -0.5rem;
+    /*font-size: 1.5rem;*/
+    /*margin-top: -0.5rem;*/
+    font-weight: bold;
 }
 
 
@@ -178,8 +180,9 @@ li.navBar:hover {
     position: absolute;
     left: 0;
     width: 100vw;
-    top: -2rem;
+    /*top: -2rem;*/
     background-color: white;
+    display: none;
 }
 
 #drop-nav li {
@@ -196,12 +199,14 @@ li.navBar:hover {
 .navBar ul li {
     font-size: 1rem;
     color: #000;
-    transition: color 0.3s, font-size 0.3s;
+    transition: color 0.3s;
+    font-weight: normal;
 }
 
 .navBar ul li:hover {
     /*color: #62F;*/
-    font-size: 1.5rem;
+    /*font-size: 1.5rem;*/
+    font-weight: bold;
 }
 
 .contactIcons {
@@ -209,10 +214,6 @@ li.navBar:hover {
     width: 2.5rem;
     height: 2.5rem;
     top: 1rem;
-}
-
-.contactDetails {
-    font-size: 1.5rem;
 }
 
 .links {
@@ -237,12 +238,82 @@ li.navBar:hover {
     color: white;
 }
 
-.font-size-1 {
-    font-size: 1.2rem;
-}
-
 .skillIcon {
     width: 20%;
     margin-left: 10%;
     margin-top: 4%;
+}
+
+.projects ul {
+    background-color: white;
+    width: 100vw;
+    height: 8vh;
+    z-index: 10000000;
+}
+
+
+@media (min-width: 1281px) {
+    h1, h2 {
+        font-size: 50px;
+    }
+
+    li {
+        font-size: 22px
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .contactDetails {
+        font-size: 24px;
+    }
+    .contact {
+        width: 35rem;
+        left: -17.5rem;
+    }
+}
+
+@media (min-width: 721px) and (max-width: 1280px) {
+    h1, h2 {
+        font-size: 40px;
+    }
+
+    li {
+        font-size: 18px
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    .contactDetails {
+        font-size: 22px;
+    }
+    .contact {
+        width: 35rem;
+        left: -17.5rem;
+    }
+}
+
+@media (max-width: 720px) {
+    h1, h2 {
+        font-size: 25px;
+    }
+
+    li {
+        font-size: 12px
+    }
+
+    p {
+        font-size: 11px;
+    }
+
+    .contactDetails {
+        font-size: 18px;
+    }
+    .contact {
+        width: 40rem;
+        left: -20rem;
+    }
 }
