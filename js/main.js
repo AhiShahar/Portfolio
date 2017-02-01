@@ -149,11 +149,11 @@ $(document).ready(function () {
         }
     }
 
-    // $("li").on("click", function(e) {
-    //   spin(e.target.dataset.index - activeIndex);
-    // });
-
-    var whatever = false;
-
+    if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
+        $(".contact").css("top","15vh");
+        $(".intro").css("top","25vh");
+        $(".projectLinks").css("top","25vh");
+    }
+    
     init();
 });
