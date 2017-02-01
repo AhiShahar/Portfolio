@@ -22,7 +22,6 @@ var duplicateSpinner = function () {
 var prepareDom = function () {
     setIndexes();
     duplicateSpinner();
-    // appendControls();
 };
 
 var spin = function () {
@@ -51,9 +50,6 @@ var spin = function () {
         $stage.addClass('js-spin-bottom');
     }
 
-    // $controls.removeClass('active');
-    // $controls.eq(activeIndex).addClass('active');
-
     window.setTimeout(function () {
         spinCallback(inc);
     }, 1500, inc);
@@ -76,6 +72,14 @@ var spinCallback = function (inc) {
 
 var attachListeners = function () {
 
+    $("li").on("click", function(e) {
+      spin(e.target.dataset.index - activeIndex);
+    });
+    
+    $(".goBack").on("click", function(e) {
+      spin(e.target.dataset.index - activeIndex);
+    });
+
     document.onkeyup = function (e) {
         switch (e.keyCode) {
             case 38:
@@ -86,11 +90,6 @@ var attachListeners = function () {
                 break;
         }
     };
-
-    // $controls.on('click', function (e) {
-    //     $('.content').css("background", "url(assets/diving" + (toIndex+1) + ".jpg)");
-    //     spin(toIndex - activeIndex);
-    // });
 
 };
 
@@ -139,7 +138,7 @@ $(document).ready(function () {
         $newContext.appendTo($rightWindow);
         $leftWindow.css("background", "rgba(" + (124-((i+1)*10)) + "," + (239-((i+1)*10)) + "," + (255-((i+1)*10)) + ",1)");
         // $rightWindow.css("background", "url(assets/diving" + (i+1)%4 + ".jpg)");
-        $rightWindow.css("background", "rgba(" + (255+((i+1)*10)) + "," + (149+((i+1)*10)) + "," + (202+((i+1)*10)) + ",1)");
+        $rightWindow.css("background", "rgba(" + (200+((i+1)*7)) + "," + (149+((i+1)*7)) + "," + (202+((i+1)*7)) + ",1)");
         $newImage.appendTo($leftWindow);
 
         if ( i === 0 ) {
@@ -148,43 +147,13 @@ $(document).ready(function () {
             $rightWindow.css("background", "none");
             $('.content').css("background", "url(assets/diving.jpg)");
         }
-
     }
 
-    $("li").on("click", function(e) {
-      spin(e.target.dataset.index - activeIndex);
-    });
-
-    // $(".projects").hover(function() {
-    //     $(".projects ul").css({"top": "0rem", "height": "3rem"});
-    // }, function() {
-    //     $(".projects ul").css({"top": "-3rem", "height": "0rem"});
+    // $("li").on("click", function(e) {
+    //   spin(e.target.dataset.index - activeIndex);
     // });
+
     var whatever = false;
-
-    $(".projects").on('mouseenter', function() {
-        $("#drop-nav").fadeIn();
-    });
-
-    $(".projects li").on('mouseleave', function() {
-        setTimeout(function() {
-            $("#drop-nav").fadeOut()
-        }, 4000);
-    });
-
-
-
-
-
-    // $("#drop-nav").on('mouseleave', function() {
-    //     $(this).toggle();
-    // });
-    //
-    // $("#drop-nav").on('mouseenter', function() {
-    //     whatever = true;
-    // });
-
-
 
     init();
 });
