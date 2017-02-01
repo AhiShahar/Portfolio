@@ -75,7 +75,7 @@ var attachListeners = function () {
     $("li").on("click", function(e) {
       spin(e.target.dataset.index - activeIndex);
     });
-    
+
     $(".goBack").on("click", function(e) {
       spin(e.target.dataset.index - activeIndex);
     });
