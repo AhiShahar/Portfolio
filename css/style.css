@@ -16,9 +16,6 @@ nav {
 }
 
 h1, h2 {
-    margin-top: -2%;
-    /*font-size: 3rem;*/
-    /*font-family: 'Ubuntu', Helvetica, Arial, sans-serif;*/
     font-family: 'Special Elite', cursive;
 }
 
@@ -137,6 +134,7 @@ p {
 }
 
 .introHead {
+    top: calc(50vh - 20px);
     font-size: 6rem;
 }
 
