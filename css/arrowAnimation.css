@@ -25,14 +25,14 @@
 }
 
 .arrowUp {
-  background-image: url("../assets/arrowUp.jpeg");
+  background-image: url("../assets/arrowUp3.jpeg");
   top: 45%;
   -webkit-animation: arrowUp 0.5s alternate infinite;
   cursor: n-resize;
 }
 
 .arrowDown {
-  background-image: url("../assets/arrowDown.jpeg");
+  background-image: url("../assets/arrowDown3.jpeg");
   top: 55%;
   -webkit-animation: arrowDown 0.5s alternate infinite;
   cursor: s-resize;
