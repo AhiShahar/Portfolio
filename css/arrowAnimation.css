@@ -3,7 +3,7 @@
         margin-top:0;
     }
     to{
-        margin-top: -20px;
+        margin-top: -10px;
     }
 }
 
@@ -12,7 +12,7 @@
         margin-top:0;
     }
     to{
-        margin-top: 20px;
+        margin-top: 10px;
     }
 }
 
@@ -27,14 +27,14 @@
 .arrowUp {
   background-image: url("../assets/arrowUp.jpeg");
   top: 45%;
-  -webkit-animation: arrowUp 1s alternate infinite;
+  -webkit-animation: arrowUp 0.5s alternate infinite;
   cursor: n-resize;
 }
 
 .arrowDown {
   background-image: url("../assets/arrowDown.jpeg");
-  top: 50%;
-  -webkit-animation: arrowDown 1s alternate infinite;
+  top: 55%;
+  -webkit-animation: arrowDown 0.5s alternate infinite;
   cursor: s-resize;
 }
 
