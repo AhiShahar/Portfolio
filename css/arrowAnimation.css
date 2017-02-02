@@ -21,18 +21,18 @@
   right: 2%;
   width: 40px;
   height: 40px;
-  background-size: contain;
+  background-size: cover;
 }
 
 .arrowUp {
-  background-image: url("../assets/arrowUp2.png");
+  background-image: url("../assets/arrowUp4.png");
   top: 45%;
   -webkit-animation: arrowUp 0.5s alternate infinite;
   cursor: n-resize;
 }
 
 .arrowDown {
-  background-image: url("../assets/arrowDown2.png");
+  background-image: url("../assets/arrowDown4.png");
   top: 55%;
   -webkit-animation: arrowDown 0.5s alternate infinite;
   cursor: s-resize;
