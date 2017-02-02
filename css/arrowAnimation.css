@@ -28,12 +28,14 @@
   background-image: url("../assets/arrowUp.jpeg");
   top: 45%;
   -webkit-animation: arrowUp 1s alternate infinite;
+  cursor: n-resize;
 }
 
 .arrowDown {
   background-image: url("../assets/arrowDown.jpeg");
   top: 50%;
   -webkit-animation: arrowDown 1s alternate infinite;
+  cursor: s-resize;
 }
 
 .showUp {

@@ -72,6 +72,14 @@ var spinCallback = function (inc) {
 
 var attachListeners = function () {
 
+    $(".arrowUp").click( function() {
+        spin(-1);
+    });
+
+    $(".arrowDown").click( function() {
+        spin(1);
+    });
+
     $("li").on("click", function(e) {
       spin(e.target.dataset.index - activeIndex);
     });
@@ -154,6 +162,6 @@ $(document).ready(function () {
         $(".intro").css("top","25vh");
         $(".projectLinks").css("top","25vh");
     }
-    
+
     init();
 });
