@@ -314,6 +314,10 @@ li.navBar:hover {
         font-size: 15px
     }
 
+    .arrowUp, .arrowDown {
+        left: 1%;
+    }
+
     p {
         font-size: 15px;
     }
@@ -326,12 +330,12 @@ li.navBar:hover {
         left: -20rem;
     }
 
-    .spinner {
+    /*.spinner {
         display: block;
     }
 
     .static-right-window, .static-right-window {
         width: 100%;
         height: 50%;
-    }
+    }*/
 }

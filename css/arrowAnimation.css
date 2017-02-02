@@ -1,0 +1,41 @@
+@-webkit-keyframes arrowUp {
+    from{
+        margin-top:0;
+    }
+    to{
+        margin-top: -20px;
+    }
+}
+
+@-webkit-keyframes arrowDown {
+    from{
+        margin-top:0;
+    }
+    to{
+        margin-top: 20px;
+    }
+}
+
+.arrowUp, .arrowDown {
+  position: fixed;
+  right: 2%;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+}
+
+.arrowUp {
+  background-image: url("../assets/arrowUp.jpeg");
+  top: 45%;
+  -webkit-animation: arrowUp 1s alternate infinite;
+}
+
+.arrowDown {
+  background-image: url("../assets/arrowDown.jpeg");
+  top: 50%;
+  -webkit-animation: arrowDown 1s alternate infinite;
+}
+
+.showUp {
+  @include animation(bounce 2s infinite);
+}
