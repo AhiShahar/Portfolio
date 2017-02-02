@@ -4,6 +4,7 @@ var activeIndex = 0,
     $stage = void 0,
     canvas = false;
 
+// set index pages for all panes of the animation, to reference while spinning
 var setIndexes = function () {
     $('.spinner').children().each(function (i, el) {
         $(el).attr('data-index', i);
@@ -11,6 +12,7 @@ var setIndexes = function () {
     });
 };
 
+// creates opposite spinner and set it to spin the opposite direction
 var duplicateSpinner = function () {
     var $el = $('.spinner').parent();
     var html = $('.spinner').parent().html();
@@ -24,22 +26,32 @@ var prepareDom = function () {
     duplicateSpinner();
 };
 
+// spin the carousel
 var spin = function () {
+    // check if there was a call for a specific pane or just next
     var inc = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
 
+
     if (disabled) return;
+
+    // prevents from recalling the same pane
     if (!inc) return;
+
+    // set the activeIndex to the requested index
     activeIndex += inc;
+
+    // update the spin callback
     disabled = true;
 
     if (activeIndex >= limit) {
         activeIndex = 0;
     }
-
+    // two condition to reset going from first pane to -1 and from last to over the length
     if (activeIndex < 0) {
         activeIndex = limit - 1;
     }
 
+    // readjust all the classes for the requested pane and current pane
     var $activeEls = $('.front-side.js-active');
     var $nextEls = $('.front-side[data-index=' + activeIndex + ']');
     $nextEls.addClass('js-next');
@@ -55,6 +67,7 @@ var spin = function () {
     }, 1500, inc);
 };
 
+// reset all the current classes and end the animation so the next one can be called
 var spinCallback = function (inc) {
     $('.js-active').removeClass('js-active');
     $('.js-next').removeClass('js-next').addClass('js-active');
@@ -64,6 +77,8 @@ var spinCallback = function (inc) {
         var $el = $(el);
         $el.prependTo($el.parent());
     });
+
+    // function the classes is removed before it is called so added a cb delay
     window.setTimeout(function () {
         $stage.removeClass('js-transitions-disabled');
         disabled = false;
@@ -71,29 +86,25 @@ var spinCallback = function (inc) {
 };
 
 var attachListeners = function () {
-
+    // attach all the events after the creation of the carousel, to get the currect index.
     $(".arrowUp").click( function() {
         spin(-1);
     });
-
     $(".arrowDown").click( function() {
         spin(1);
     });
-
     $("li").on("click", function(e) {
       spin(e.target.dataset.index - activeIndex);
     });
-
     $(".goBack").on("click", function(e) {
       spin(e.target.dataset.index - activeIndex);
     });
-
     document.onkeyup = function (e) {
         switch (e.keyCode) {
-            case 38:
+            case 38: // arrow key up
                 spin(-1);
                 break;
-            case 40:
+            case 40: // arrow key down
                 spin(1);
                 break;
         }
@@ -102,6 +113,7 @@ var attachListeners = function () {
 };
 
 var assignEls = function () {
+    // save the first panes after load
     $stage = $('.static-display');
 };
 
@@ -112,7 +124,6 @@ var init = function () {
 };
 
 function createCarousel(){
-    // var newCarousel = $('<div class="controls"></div><div class="static-display"><div class="spinner spinner--left"></div></div>');
     var newCarousel = $('<div class="static-display"><div class="spinner spinner--left"></div></div>');
     $('.carousel').append(newCarousel);
 }
@@ -121,18 +132,17 @@ $(document).ready(function () {
 
     createCarousel();
 
-    var cubeSize = parseInt($("#carousel")[0].dataset.panes);
-    var paragraphs = $(".static-context");
-    var images = $(".static-image");
-    console.log(paragraphs);
+    var cubeSize = parseInt($("#carousel")[0].dataset.panes); // the number of panes to view
+    var paragraphs = $(".static-context"); // an array of all the right panes contexts
+    var images = $(".static-image"); // an array of all the left panes contexts
+
     for (var i = 0 ; i < cubeSize ; i++ ) {
 
+        // clean the data to push into the carousel panes
         var $newContext = $(paragraphs[i].innerHTML) || "";
         var $newImage = $(images[i].innerHTML) || "";
-
         var staticCarousel = paragraphs[i].parentNode;
         staticCarousel.removeChild(paragraphs[i]);
-
         var staticImage = images[i].parentNode;
         staticImage.removeChild(images[i]);
 
@@ -157,10 +167,14 @@ $(document).ready(function () {
         }
     }
 
-    if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
+    var itsSafary = function() { // light adjustments for safary browser compatibility
         $(".contact").css("top","15vh");
         $(".intro").css("top","25vh");
         $(".projectLinks").css("top","25vh");
+    };
+
+    if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
+        itsSafary();
     }
 
     init();
