@@ -103,14 +103,6 @@ html, body {
   right: 0;
   left: auto;
 }
-/*.static-left-window:after {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.1);
-}*/
 .static-right-window {
   display: flex;
   align-items: center;

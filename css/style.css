@@ -303,6 +303,9 @@ li.navBar:hover {
         width: 35rem;
         left: -17.5rem;
     }
+    .overflow-sm-scroll {
+      overflow: scroll;
+    }
 }
 
 @media (max-width: 720px) {
@@ -329,13 +332,7 @@ li.navBar:hover {
         width: 40rem;
         left: -20rem;
     }
-
-    /*.spinner {
-        display: block;
+    .overflow-sm-scroll {
+      overflow: scroll;
     }
-
-    .static-right-window, .static-right-window {
-        width: 100%;
-        height: 50%;
-    }*/
 }
